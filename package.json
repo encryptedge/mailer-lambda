@@ -1,7 +1,6 @@
 {
   "name": "mailer-lambda",
   "version": "0.1.0",
-  "type": "module",
   "bin": {
     "mailer-lambda": "bin/mailer-lambda.js"
   },
