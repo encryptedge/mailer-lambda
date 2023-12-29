@@ -1,9 +1,27 @@
+import "dotenv/config";
 
-import { Hono } from 'hono'
-import { handle } from 'hono/aws-lambda'
+import { serve } from "@hono/node-server";
+import { Hono } from "hono";
+import { handle } from "hono/aws-lambda";
+import { basicAuth } from "hono/basic-auth";
 
-const app = new Hono()
+import { sendMail } from "../functions/sendMail";
 
-app.get('/', (c) => c.text('Hello Hono! Logger ENV => ' +  process.env.MAIL_LOGGER))
+const app = new Hono();
 
-export const handler = handle(app)
+app.use("/ticket/*", basicAuth({
+    username: process.env.BASIC_AUTH_USERNAME,
+    password: process.env.BASIC_AUTH_PASSWORD
+}));
+
+app.get("/", (c) => c.text("Hello Hono! Logger ENV => " +  process.env.MAIL_LOGGER));
+app.post("/ticket/sendMail", sendMail);
+
+if (process.env.NODE_ENV === "development") {
+    serve({
+        fetch: app.fetch,
+        port: 4000,
+    });
+}
+
+export const handler = handle(app);
