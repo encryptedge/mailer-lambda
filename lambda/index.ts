@@ -8,8 +8,8 @@ import { sendMail } from "../functions/sendMail";
 const app = new Hono();
 
 app.use("/ticket/*", basicAuth({
-    username: process.env.MAIL_FROM_NAME,
-    password: process.env.MAIL_PASS
+    username: process.env.MAIL_FROM_NAME!,
+    password: process.env.MAIL_PASS!
 }));
 
 app.get("/", (c) => c.text("Hello from Hono! Logger ENV => " +  process.env.MAIL_LOGGER));
