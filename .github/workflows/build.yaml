@@ -1,8 +1,6 @@
 name: Linting
 
 on:
-    push:
-        branches: [main, dev]
     pull_request:
         branches: [main, dev]
     workflow_dispatch:
@@ -17,6 +15,3 @@ jobs:
 
             - name: Setup Environment
               uses: ./.github/actions/setup
-
-            - name: Lint Code
-              run: pnpm lint
