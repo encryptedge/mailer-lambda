@@ -9,14 +9,12 @@
     "watch": "tsc -w",
     "cdk": "cdk",
     "cdk:deploy": "cdk deploy",
-    "lint": "eslint . --ext .ts",
-    "dev": "NODE_ENV=development node --loader @esbuild-kit/esm-loader lambda/index.ts"
+    "lint": "eslint . --ext .ts"
   },
   "devDependencies": {
     "@bravo68web/eslint-config": "^1.2.2",
     "@bravo68web/prettier-config": "^1.2.2",
     "@bravo68web/tsconfig": "^1.2.2",
-    "@esbuild-kit/esm-loader": "^2.6.5",
     "@types/node": "20.10.4",
     "@types/nodemailer": "^6.4.14",
     "aws-cdk": "2.117.0",

@@ -11,8 +11,6 @@ export type ConfigProps = {
     MAIL_LOGGER: string;
     MAIL_FROM_EMAIL: string;
     MAIL_FROM_NAME: string;
-    BASIC_AUTH_USERNAME: string;
-    BASIC_AUTH_PASSWORD: string;
 };
 
 export const getConfig = (): ConfigProps => ({
@@ -23,6 +21,4 @@ export const getConfig = (): ConfigProps => ({
     MAIL_LOGGER: process.env.MAIL_LOGGER || "",
     MAIL_FROM_EMAIL: process.env.MAIL_FROM_EMAIL || "",
     MAIL_FROM_NAME: process.env.MAIL_FROM_NAME || "",
-    BASIC_AUTH_USERNAME: process.env.BASIC_AUTH_USERNAME || "",
-    BASIC_AUTH_PASSWORD: process.env.BASIC_AUTH_PASSWORD || "",
 });
