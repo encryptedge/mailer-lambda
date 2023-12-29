@@ -1,14 +1,9 @@
-# Welcome to your CDK TypeScript project
+# Mailer Lambda 📬
 
-This is a blank project for CDK development with TypeScript.
-
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+Mailer Lambda is a simple AWS Lambda function that sends RCSCTF24 Ticket to the user's email address.
 
 ## Useful commands
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+* `pnpm build`   compile typescript to js
+* `pnpm watch`   watch for changes and compile
+* `pnpm cdk:deploy`  deploy this stack to your default AWS account/region
