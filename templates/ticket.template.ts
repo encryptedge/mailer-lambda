@@ -173,7 +173,7 @@ const ticketTemplate = (ticket: Ticket) => {
                       </thead>
                       <tbody>
                         <tr>
-                          <td ticket.paye e_name>${ticket.payee_ticket_id}</td>
+                          <td ticket.paye e_name>${ticket.payee_name}</td>
                           <td>${ticket.ticket_type}</td>
                         </tr>
                       </tbody>
