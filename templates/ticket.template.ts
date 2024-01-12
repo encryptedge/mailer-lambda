@@ -166,13 +166,13 @@ const ticketTemplate = (ticket: Ticket) => {
                     </p>
                     <table ticket.ticket cellpadding="0" cellspacing="0" role="none">
                       <thead>
-                        <tr>
+                        <tr style="padding: 15px;">
                           <th>Name</th>
                           <th>Type</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr>
+                      <tbody style=" padding: 15px; ">
+                        <tr style=" padding: 15px; ">
                           <td ticket.paye e_name>${ticket.payee_ticket_id}</td>
                           <td>${ticket.ticket_type}</td>
                         </tr>
